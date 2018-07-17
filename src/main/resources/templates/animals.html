@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Schronisko</title>
+</head>
+<body>
+
+<h1>Schronisko pod mostem</h1>
+
+<ul>
+    <li th:each="zwierz: ${zwierzaczki}">
+        <a th:href="'/zwierzak?imie=' + ${zwierz.name}" th:text="${zwierz.name}"></a>
+    </li>
+</ul>
+
+<ul>
+    <li th:each="zwierz: ${zwierzaczki}" th:text="${zwierz.name}"></li>
+</ul>
+
+</body>
+</html>
